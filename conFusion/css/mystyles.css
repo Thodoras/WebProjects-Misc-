@@ -99,3 +99,9 @@ body {
 	left: 25%;
 }
 
+#carouselButtons {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+

@@ -49,7 +49,7 @@
                     <li><a href="contactus.html"><i class="fa fa-envelope-o"></i>Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                    <li><a href="#" id="login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
                 </ul>
             </div>
         </div>
@@ -91,7 +91,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-2">
                     <p style="padding: 30px;"></p>
-                    <a data-toggle="modal" data-target="#reserveModal" class="btn btn-warning btn-block">Reserve Table</a>
+                    <a class="btn btn-warning btn-block" id="reserveButton">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -222,6 +222,10 @@
                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                    <div class="btn-group" id="carouselButtons">
+                        <button class="btn btn-danger btn-xs" id="carousel-pause"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span></button>
+                        <button class="btn btn-danger btn-xs" id="carouse-play"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -332,6 +336,29 @@
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#mycarousel").carousel({interval: 2000});
+            $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            })
+            $("carouse-play").carousel(function(){
+                $("#mycarousel").carousel('cycle')
+            })
+        })
+
+        $(document).ready(function(){
+            $("#login").click(function() {
+                $('#loginModal').modal('show');
+            })
+        })
+
+        $(document).ready(function() {
+            $('#reserveButton').click(function() {
+                $('#reserveModal').modal('show');
+            })
+        })
     </script>
 </body>
 
