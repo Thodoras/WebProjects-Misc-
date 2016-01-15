@@ -1,0 +1,31 @@
+{
+  "name": "PLawyers",
+  "authors": [
+    "Thodoras <theodoretopol@gmail.com>"
+  ],
+  "description": "Website for the law firm 'Plawyers'",
+  "main": "home.html",
+  "moduleType": [],
+  "keywords": [
+    "Lawyers",
+    "Lawyers",
+    "in",
+    "Athens",
+    "p",
+    "lawyers",
+    "plawyers"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "font-awesome": "~4.5.0"
+  }
+}
